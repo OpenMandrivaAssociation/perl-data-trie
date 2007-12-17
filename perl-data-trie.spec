@@ -14,7 +14,6 @@ Source:		http://search.cpan.org/CPAN/authors/id/H/HA/HAMMOND/%{module}-%{version
 Url:		http://search.cpan.org/dist/%{module}
 BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module implements a letter trie data structure. This is a linked set of
