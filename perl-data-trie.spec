@@ -1,20 +1,18 @@
-%define module	data-trie
-%define Module	Data-Trie
-%define name	perl-%{module}
-%define version 0.01
-%define release %mkrel 5
+%define upstream_name	 data-trie
+%define upstream_version 0.01
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	An implementation of a letter trie
 License:	GPL
 Group:		Development/Perl
-Source:		http://search.cpan.org/CPAN/authors/id/H/HA/HAMMOND/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAMMOND/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements a letter trie data structure. This is a linked set of
@@ -31,7 +29,7 @@ Note that the remove() method does not prune nodes and thus a Trie can only
 grow in size.
 
 %prep
-%setup -q -n %{Module}-%{version}
+%setup -q -n Data-Trie-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -52,4 +50,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/Data
 %{_mandir}/*/*
-
