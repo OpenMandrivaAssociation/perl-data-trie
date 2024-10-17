@@ -8,7 +8,7 @@ Release:	4
 Summary:	An implementation of a letter trie
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAMMOND/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
