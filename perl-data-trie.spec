@@ -2,14 +2,14 @@
 %define upstream_version 0.01
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	An implementation of a letter trie
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/H/HA/HAMMOND/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/data-trie
+Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAMMOND/data-trie-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
