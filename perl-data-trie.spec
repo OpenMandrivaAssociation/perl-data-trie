@@ -1,15 +1,13 @@
 %define upstream_name	 data-trie
-%define upstream_version 0.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.01
+Release:	6
 
 Summary:	An implementation of a letter trie
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/data-trie
-Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAMMOND/data-trie-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/H/HA/HAMMOND/data-trie-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -30,7 +28,7 @@ Note that the remove() method does not prune nodes and thus a Trie can only
 grow in size.
 
 %prep
-%setup -q -n Data-Trie-%{upstream_version}
+%setup -q -n Data-Trie-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -51,9 +49,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.10.0-1mdv2010.0
 + Revision: 403089
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.01-5mdv2009.0
+- rebuild using %0.01 Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.01-5mdv2009.0
 + Revision: 256483
 - rebuild
 
